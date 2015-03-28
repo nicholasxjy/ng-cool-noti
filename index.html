@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>Noti</title>
+  <link rel="stylesheet" type="text/css" href="./src/ng-cool-noti.css">
+  <link rel="stylesheet" type="text/css" href="./bower_components/fontawesome/css/font-awesome.css">
+  <style type="text/css">
+    button {
+      width: 200px;
+      height: 40px;
+      outline: none;
+      border-radius: 2px;
+      border: 1px solid;
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .success {
+      background-image: -webkit-linear-gradient(top,#5cb85c 0,#419641 100%);
+      background-image: -o-linear-gradient(top,#5cb85c 0,#419641 100%);
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#5cb85c),to(#419641));
+      background-image: linear-gradient(to bottom,#5cb85c 0,#419641 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
+      filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      background-repeat: repeat-x;
+      border-color: #3e8f3e;
+    }
+    .danger {
+      background-image: -webkit-linear-gradient(top,#d9534f 0,#c12e2a 100%);
+      background-image: -o-linear-gradient(top,#d9534f 0,#c12e2a 100%);
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#d9534f),to(#c12e2a));
+      background-image: linear-gradient(to bottom,#d9534f 0,#c12e2a 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc12e2a', GradientType=0);
+      filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      background-repeat: repeat-x;
+      border-color: #b92c28;
+    }
+    .warning {
+      background-image: -webkit-linear-gradient(top,#f0ad4e 0,#eb9316 100%);
+      background-image: -o-linear-gradient(top,#f0ad4e 0,#eb9316 100%);
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#f0ad4e),to(#eb9316));
+      background-image: linear-gradient(to bottom,#f0ad4e 0,#eb9316 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0ad4e', endColorstr='#ffeb9316', GradientType=0);
+      filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      background-repeat: repeat-x;
+      border-color: #e38d13;
+    }
+  </style>
+</head>
+<body ng-controller="AppCtrl">
+  <button class="btn success" ng-click="showSuccessNoti()">Show Success Notification</button>
+  <button class="btn danger" ng-click="showDangerNoti()">Show Danger Notification</button>
+  <button class="btn warning" ng-click="showWarningNoti()">Show Warning Notification</button>
+  <button class="btn success" ng-click="showAvatarNoti()">Show Avatar Notification</button>
+  <button class="btn success" ng-click="showNoneCloseNoti()">Show NoClose Notification</button>
+  <script src="./bower_components/angular/angular.js"></script>
+  <script src="./src/ng-cool-noti.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
