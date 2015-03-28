@@ -3,11 +3,11 @@
     .module('app', [
       'ngCoolNoti'
     ])
-    // .config(['ngCoolNotiProvider', function(ngCoolNotiProvider) {
-    //   ngCoolNotiProvider.setDefaults({
-    //     timeout: 1000
-    //   })
-    // }])
+    .config(['ngCoolNotiProvider', function(ngCoolNotiProvider) {
+      ngCoolNotiProvider.setDefaults({
+        timeout: 5000
+      })
+    }])
     .controller('AppCtrl', function($scope, ngCoolNoti) {
       $scope.showSuccessNoti = function() {
         ngCoolNoti.create({
